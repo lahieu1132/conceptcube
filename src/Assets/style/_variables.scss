@@ -1,0 +1,57 @@
+$family: (
+  primary: 'utm-avo',
+  // second: "Open+Sans"
+);
+
+$montserrat: 'Montserrat', sans-serif;
+
+$header-height: 72px;
+
+$color: (
+  // theme
+  main: #99dd6e,
+  //color
+  gray-1: #f1f2f5,
+  black-1: #040404,
+  red-1: #ff2400,
+  purple-1: #673dc7,
+  blue-1: #1b0080,
+  // required
+  b: #000,
+  w: #fff,
+  x: #f6f6f6,
+  b-op: rgba(0, 0, 0, 0.8),
+  // notification
+
+);
+
+$shadow: (
+  s1: 0 3px 6px rgba(0, 0, 0, 0.16),
+  s2: 0 4px 10px rgba(0, 0, 0, 0.16),
+);
+
+$space: (
+  120: 120px,
+  82: 82px,
+  64: 64px,
+  60: 60px,
+  56: 56px,
+  54: 54px,
+  48: 48px,
+  45: 45px,
+  42: 42px,
+  40: 40px,
+  38: 38px,
+  36: 36px,
+  32: 32px,
+  24: 24px,
+  20: 20px,
+  16: 16px,
+  15: 15px,
+  12: 12px,
+  10: 10px,
+  5: 5px,
+  0: 0px,
+);
+
+///////////////////// PAGE ////////////////////////////

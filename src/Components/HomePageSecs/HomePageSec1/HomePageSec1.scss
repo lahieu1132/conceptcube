@@ -1,0 +1,126 @@
+@import "../../../Assets/style/variables";
+
+
+.home-one {
+    height: 100%;
+    background: url('../../../Assets/Images/New\ folder/bg-object-1@2x.png') no-repeat 0 175%,
+    url('../../../Assets/Images/New\ folder/bg-object-1@2x.png') no-repeat 38% -50%,
+    url('../../../Assets/Images/New\ folder/bg-object-2@2x.png') no-repeat 66% 70%,
+    url('../../../Assets/Images/New\ folder/bg-object-3@2x.png') no-repeat 75% 100%,
+    url('../../../Assets/Images/New\ folder/bg-object-4@2x.png') no-repeat 100% 170%;
+    background-color: map-get($map: $color, $key: blue-1);
+    background-size: 9%;
+    .home-one__container{
+        height: 100%;
+        margin: 0 10%;
+    }
+}
+
+.home-one__main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .home-one__link {
+        color: map-get($map: $color, $key: main);
+        font-size: 13px;
+    }
+    .home-one__top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        opacity: 0;
+        transform: translateY(-50%);
+        transition: all .5s ease;
+        .home-one__logo {
+            width: 97px;
+            height: 14px;
+            cursor: pointer;
+        }
+    }
+    .home-one__title {
+        font-size: 160px;
+        line-height: 190px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.1;
+        letter-spacing: normal;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all .5s ease;
+    }
+    .home-one__bottom {
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all .5s ease;
+    }
+}
+
+.section.active {
+    .home-one__main {
+        .home-one__top {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.5s ease;
+            transition-delay: 1s;
+        }
+
+        .home-one__title {
+            opacity: 1;
+            transform: translateX(0);
+            transition: all 1s ease;
+            transition-delay: 0.5s;
+        }
+
+        .home-one__bottom {
+            opacity: 1;
+            transform: translateX(0);
+            transition: all .5s ease;
+            transition-delay: 0.2s;
+
+        }
+        
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .home-one {
+        height: 100%;
+        background: url('../../../Assets/Images/New\ folder/bg-object-1@2x.png') no-repeat 35% -10%,
+        url('../../../Assets/Images/New\ folder/bg-object-1@2x.png') no-repeat 0% 100%,
+        url('../../../Assets/Images/New\ folder/bg-object-2@2x.png') no-repeat 100% 100%;
+        background-color: map-get($map: $color, $key: blue-1);
+        background-size: 9%;
+    }
+    .home-one__main {
+        .home-one__title {
+            font-size: 90px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .home-one {
+        height: 100%;
+        background: url('../../../Assets/Images/New\ folder/bg-object-1@2x.png') no-repeat 38% -25%,
+        url('../../../Assets/Images/New\ folder/bg-object-1@2x.png') no-repeat 0% 133%,
+        url('../../../Assets/Images/New\ folder/bg-object-2@2x.png') no-repeat 100% 148%;
+        background-color: map-get($map: $color, $key: blue-1);
+        background-size: 20%;
+        .home-one__container{
+            height: 100%;
+            margin: 0 10%;
+        }
+        .home-one__container{
+            margin: 0 15px;
+        }
+    }
+    .home-one__main {
+        .home-one__title {
+            font-size: 48px;
+            line-height: 1.4;
+        }
+    }
+}

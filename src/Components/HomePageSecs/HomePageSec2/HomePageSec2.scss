@@ -1,0 +1,49 @@
+@import "../../../Assets/style/variables";
+
+.home-two {
+    height: 100%;
+    background-color: map-get($map: $color, $key: blue-1);
+    .home-two_container {
+        height: 100%;
+        .home-two_main {
+            height: 100%;
+            overflow-y: hidden;
+            position: relative;
+            margin-left: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .home-two__title{
+                font-size: 11em;
+                position: absolute;
+                top: 49%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 70%;
+                line-height: 1.16;
+                z-index: 1;
+            }
+            .home-two_sliders {
+                margin: auto;
+                height: 32vw;
+                width: 28vw;
+                min-height: 350px;
+                overflow: hidden;
+                z-index: 3;
+                background: #fff;
+                opacity: 0;
+                transition: all 0.5s ease;
+
+            }
+        }
+    }
+}
+.section.active {
+    .home-two {
+        .home-two_sliders {
+            opacity: 1;
+            transition: all 0.5s ease;
+            transition-delay: 0.5s;
+        }
+    }
+}

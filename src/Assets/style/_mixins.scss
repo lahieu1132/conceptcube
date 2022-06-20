@@ -1,0 +1,201 @@
+@mixin family--primary {
+  font-family: map-get($family, primary), sans-serif;
+}
+@mixin family--second {
+  // font-family: map-get($family, second), sans-serif;
+}
+
+@mixin p-line-clamp($i) {
+  display: -webkit-box;
+  -webkit-line-clamp: #{$i};
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin uppercase{
+  text-transform: uppercase;
+}
+@mixin italic{
+  font-style: italic;
+  
+}
+
+
+
+//////////// FONT WEIGHT ///////////////////////
+////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+//////////// FONT SIZE /////////////////////////
+
+@mixin size($key){
+  @each $idx, $val in map-get($size, #{$key}){
+    @if $idx == default{
+      font-size: $val;
+    }
+    @else{
+      @media (max-width: map-get($media, $idx)){
+        font-size: $val;
+      }
+    }
+  }
+}
+
+@mixin title($key){
+  @each $idx, $val in map-get($title, #{$key}){
+    @if $idx == default{
+      font-size: $val;
+    }
+    @else{
+      @media (max-width: map-get($media, $idx)){
+        font-size: $val;
+      }
+    }
+  }
+}
+
+
+//////////// FONT SIZE ////////////////////////
+////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+//////////// Shadow ////////////////////////
+
+@mixin shadow($sd){
+  box-shadow: map-get($shadow, #{$sd});
+}
+
+//////////// Shadow ////////////////////////
+////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+//////////// Gradient ////////////////////////
+
+@mixin gradient($gr)
+{
+  background-image: $gr;
+}
+
+//////////// Gradient ////////////////////////
+////////////////////////////////////////////////
+
+////////////////////////////////////////////////
+//////////// color ////////////////////////
+
+@mixin txt($txt)
+{
+  color: map-get($color, #{$txt});
+}
+//////////// color ////////////////////////
+////////////////////////////////////////////////
+
+////////////////////////////////////////////////
+//////////// background ////////////////////////
+
+@mixin bg($bg)
+{
+  background-color: map-get($color, #{$bg});
+}
+
+// @include txt(main);
+//////////// background ////////////////////////
+////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+///////////////// BLOCK ////////////////////////
+
+@mixin block($key, $name, $side: -1){
+  @each $idx, $val in map-get($block, #{$key}){
+    @if $side == -1{
+      @if $idx == default{
+        #{$name}: $val;
+      }
+      @else{
+        @media (max-width: map-get($media, $idx)){
+          #{$name}: $val;
+        }
+      }
+    }
+    @else{
+      @if $idx == default{
+        #{$name}: $val $side;
+      }
+      @else{
+        @media (max-width: map-get($media, $idx)){
+          #{$name}: $val $side;
+        }
+      }
+    }
+  }
+}
+
+///////////////// BLOCK ////////////////////////
+////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+///////////////// SPACE ////////////////////////
+
+@mixin space($key, $name, $side: '-1'){
+  @each $idx, $val in map-get($space, #{$key}){
+    @if $side == '-1'{
+      @if $idx == default{
+        #{$name}: $val;
+      }
+      @else{
+        @media (max-width: map-get($media, $idx)){
+          #{$name}: $val;
+        }
+      }
+    }
+    @else{
+      @if $idx == default{
+        #{$name}: $val $side;
+      }
+      @else{
+        @media (max-width: map-get($media, $idx)){
+          #{$name}: $val $side;
+        }
+      }
+    }
+  }
+}
+
+///////////////// SPACE ////////////////////////
+////////////////////////////////////////////////
+
+////////////////////////////////////////////////
+///////////////// SECTION ////////////////////////
+
+@mixin section($key, $name, $side: '-1'){
+  @each $idx, $val in map-get($section, #{$key}){
+    @if $side == '-1'{
+      @if $idx == default{
+        #{$name}: $val;
+      }
+      @else{
+        @media (max-width: map-get($media, $idx)){
+          #{$name}: $val;
+        }
+      }
+    }
+    @else{
+      @if $idx == default{
+        #{$name}: $val $side;
+      }
+      @else{
+        @media (max-width: map-get($media, $idx)){
+          #{$name}: $val $side;
+        }
+      }
+    }
+  }
+}
+
+///////////////// SECTION ////////////////////////
+////////////////////////////////////////////////
+
