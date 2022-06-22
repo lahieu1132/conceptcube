@@ -18,8 +18,12 @@
                 font-size: 65px;
                 font-weight: 700;
                 margin-bottom: 110px;
+                transform: translateX(-100%);
+                opacity: 0;
             }
             .home-four-content {
+                transform: translateX(-100%);
+                opacity: 0;
                 .home-four-item {
                     border-right: 1px solid #999;
                     h2 {
@@ -41,6 +45,26 @@
                             font-weight: 300;
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+.section.active {
+    .home-four {
+        .home-four-container {
+            .home-four-main {
+                .home-four-main-title {
+                    transform: translateX(0);
+                    opacity: 1;
+                    transition: all 1s ease;
+                }
+                .home-four-content {
+                    transform: translateX(0);
+                    opacity: 1;
+                    transition: all 1s ease;
+                    transition-delay: .5s;
                 }
             }
         }

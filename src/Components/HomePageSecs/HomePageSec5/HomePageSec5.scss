@@ -20,6 +20,8 @@
                 font-size: 4.3em;
                 top: 80%;
                 color: #deff72;
+                transform: translateX(-100%);
+                opacity: 0;
             }
             .home-five-contact {
                 display: flex;
@@ -30,17 +32,51 @@
                     h3 {
                         font-size: 2em;
                         margin-bottom: 20px;
+                        transform: translateX(100%);
+                        opacity: 0;
+                        
                     }
                     p {
                         font-size: .8em;
                         font-weight: 100;
                         margin-left: 20px;
+                        transform: translateY(-20px);
                     }
                 }
             }
         }
     }
 }
+
+.section.active {
+    .home-five {
+        .home-five-container {
+            .home-five-main {
+                h2 {
+                    transform: translateY(0);
+                    opacity: 1;
+                    transition: all 1s ease;
+                }
+                .home-five-contact {
+                    .home-five-contact-item{
+                        h3 {
+                            transform: translateX(0) !important;
+                            opacity: 1 !important;
+                            transition: all 1s ease;
+                        }
+                        p {
+                            transform: translateY(0);
+                            transition: all 0.5s ease;
+                            transition-delay: 1s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 
 @media screen and (max-width: 1024px) {
     .home-two {
