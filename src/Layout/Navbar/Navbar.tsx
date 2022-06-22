@@ -8,6 +8,7 @@ const language = ["KR", "EN"]
 function Navbar() {
 
     const [menuActive, setMenuActive] = useState(false)
+    const [languageAvtive, setLanguageAvtive] = useState(0)
 
   return (
     <div className='navbar'>
@@ -21,7 +22,9 @@ function Navbar() {
             <div className='navbar-language'>
                 {
                     language.map((language, index) => (
-                        <div className='navbar-language-item active' key={index}>
+                        <div className={`navbar-language-item ${languageAvtive == index && "active"}`} key={index}
+                            onClick={()=>setLanguageAvtive(index)}
+                        >
                             {language}
                         </div>
                     ))
