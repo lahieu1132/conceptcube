@@ -33,7 +33,10 @@
                 background: #fff;
                 opacity: 0;
                 transition: all 0.5s ease;
-
+                .mySwiper {
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
     }
@@ -44,6 +47,31 @@
             opacity: 1;
             transition: all 0.5s ease;
             transition-delay: 0.5s;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .home-two {
+        .home-two_sliders {
+            width: 60vw !important;
+            height: 60vw !important;
+        }
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .home-two {
+        .home-two_main {
+            .home-two__title {
+                font-size: 6em !important
+                ;
+            }
+            .home-two_sliders {
+                width: 60vw !important;
+            }
         }
     }
 }

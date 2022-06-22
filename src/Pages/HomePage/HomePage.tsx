@@ -18,7 +18,7 @@ function HomePage() {
     licenseKey = {'YOUR_KEY_HERE'}
     scrollingSpeed = {1000} /* Options here */
     anchors={anchors}
-    navigation
+    navigation={true}
     navigationTooltips={anchors}
 
     render={({ state, fullpageApi }) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import './index.css';
+import './index.scss';
 import '../src/Assets/font/font.scss';
 import '../src/Assets/style/_grid.scss';
 import '../src/Assets/style/_reset.scss';

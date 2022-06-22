@@ -1,3 +1,5 @@
+@import "./Assets/style/variables";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -20,4 +22,32 @@ code {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
+}
+
+#fp-nav.fp-right {
+  ul{
+    li {
+      a {
+        span {
+          border-radius: unset !important;
+          background: #fff;
+          // width: 10px !important;
+          // height: 10px !important;
+        }
+      }
+      a.active, a:hover {
+        span {
+          background: map-get($map: $color, $key: green-1) !important;
+        // width: 10px;
+        // height: 10px;
+        }
+      }
+    }
+  }
+}
+.fp-overflow {
+  overflow: hidden !important;
+}
+.fp-watermark {
+  display: none !important; 
 }
