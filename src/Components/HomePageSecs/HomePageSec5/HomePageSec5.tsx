@@ -2,6 +2,8 @@ import React from 'react'
 
 import "./HomePageSec5.scss"
 
+import {AiOutlineMail} from "react-icons/ai"
+
 function HomePageSec5() {
   return (
     <div className='section'>
@@ -9,23 +11,33 @@ function HomePageSec5() {
         <div className="home-five-container">
           <div className="home-five-main">
             <div className="home-five-contact">
-              <div className="home-five-contact-item">
+              <div className="home-five-contact-item select-none">
                 <h3>
                   Partnership
                 </h3>
-                <p>
-                  looc.tzlee@gmail.com
-                </p>
+                <div className="home-five-contact-item-mail">
+                  <p>
+                    looc.tzlee@gmail.com
+                  </p>
+                  <div className="contact-item-mail-icon">
+                    <AiOutlineMail />
+                  </div>
+                </div>
               </div>
-              <div className="home-five-contact-item">
+              <div className="home-five-contact-item select-none">
                 <h3>
                   Recruiting.
                 </h3>
-                <p>
-                  looc.tzlee@gmail.com
-                </p>
+                <div className="home-five-contact-item-mail">
+                  <p>
+                    looc.tzlee@gmail.com
+                  </p>
+                  <div className="contact-item-mail-icon">
+                    <AiOutlineMail className='icon'/>
+                  </div>
+                </div>
               </div>
-              <div className="home-five-contact-item">
+              <div className="home-five-contact-item select-none">
                 <h3>
                   Learn more
                 </h3>
