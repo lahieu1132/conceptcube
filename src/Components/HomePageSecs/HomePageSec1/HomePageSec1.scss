@@ -24,6 +24,9 @@
     .home-one__link {
         color: map-get($map: $color, $key: main);
         font-size: 13px;
+        &:hover {
+            color: map-get($map: $color, $key: hover-1);
+        }
     }
     .home-one__top {
         display: flex;

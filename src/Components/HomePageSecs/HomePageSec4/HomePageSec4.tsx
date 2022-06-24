@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { useEffect, MouseEvent } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 
 
 
 import "./HomePageSec4.scss"
 import "swiper/css";
+import "swiper/css/scrollbar";
 
+import { Scrollbar } from "swiper";
 
 const items = [
   {
     year: 2022,
     i: [
+      {
+        desc: "LG Display Shocase 영상 제작",
+        author: "MOTION"
+      },
       {
         desc: "LG Display Shocase 영상 제작",
         author: "MOTION"
@@ -47,6 +53,10 @@ const items = [
       {
         desc: "LG Display Shocase 영상 제작",
         author: "MOTION"
+      },
+      {
+        desc: "LG Display Shocase 영상 제작",
+        author: "MOTION"
       }
     ]
   },
@@ -66,6 +76,9 @@ const items = [
         author: "MOTION"
       },
       {
+        desc: "LG Display Shocase 영상 제작",
+        author: "MOTION"
+      },{
         desc: "LG Display Shocase 영상 제작",
         author: "MOTION"
       }
@@ -116,6 +129,9 @@ const items = [
 ]
 
 function HomePageSec4() {
+
+  
+
   return (
     <div className='section'>
       <div className="home-four">
@@ -136,6 +152,9 @@ function HomePageSec4() {
                     slidesPerView: 2,
                   },
                   1024: {
+                    slidesPerView: 3,
+                  },
+                  1460: {
                     slidesPerView: 4,
                   },
                 }}
@@ -153,6 +172,10 @@ function HomePageSec4() {
                           slidesPerView={4}
                           spaceBetween={30}
                           className="mySwiper-vertical"
+                          scrollbar={{
+                            hide: true,
+                          }}
+                          modules={[Scrollbar]}
                         >
                          {
                           item.i.map(item => (

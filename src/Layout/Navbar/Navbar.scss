@@ -25,11 +25,11 @@
             }
             &.active {
                 span:first-child {
-                    transform: translate(0%, 12px) rotate(-20deg);
+                    transform: translate(0%, 12px) rotate(-45deg);
                     transition: all 0.5s ease;
                 }
                 span:last-child {
-                    transform:  rotate(20deg);
+                    transform:  rotate(45deg);
                     transition: all 0.5s ease;
                 } 
             }

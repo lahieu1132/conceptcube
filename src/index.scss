@@ -31,15 +31,20 @@ code {
         span {
           border-radius: unset !important;
           background: #fff;
-          // width: 10px !important;
-          // height: 10px !important;
+          width: 8px !important;
+          height: 8px !important;
+          margin: unset !important;
+          transition: all 0.5s ease;
         }
       }
       a.active, a:hover {
         span {
           background: map-get($map: $color, $key: green-1) !important;
-        // width: 10px;
-        // height: 10px;
+          margin: unset !important;
+          width: 30px !important;
+          transform-origin: left center;
+          transform: translateX(-22px) !important; 
+          transition: all 0.5s ease;
         }
       }
     }
