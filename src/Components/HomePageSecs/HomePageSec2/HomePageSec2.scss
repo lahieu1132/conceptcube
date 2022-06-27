@@ -48,6 +48,15 @@
             transition: all 0.5s ease;
             transition-delay: 0.5s;
         }
+        
+    }
+}
+
+@media screen and (max-width: 1345px) {
+    .home-two {
+        .home-two__title {
+            font-size: 9.6em !important;
+        }
     }
 }
 
@@ -58,8 +67,13 @@
             width: 60vw !important;
             height: 60vw !important;
         }
+        .home-two__title {
+            font-size: 9em !important;
+        }
     }
 }
+
+
 
 
 @media screen and (max-width: 576px) {

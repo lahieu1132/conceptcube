@@ -7,7 +7,7 @@ import "./HomePageSec4.scss"
 import "swiper/css";
 import "swiper/css/scrollbar";
 
-import { Scrollbar } from "swiper";
+import { Scrollbar, Mousewheel } from "swiper";
 
 const items = [
   {
@@ -170,12 +170,13 @@ function HomePageSec4() {
                         <Swiper
                           direction={"vertical"}
                           slidesPerView={4}
-                          spaceBetween={30}
+                          // spaceBetween={10}
                           className="mySwiper-vertical"
-                          scrollbar={{
-                            hide: true,
-                          }}
-                          modules={[Scrollbar]}
+                          mousewheel={true}
+                          // scrollbar={{
+                          //   hide: true,
+                          // }}
+                          modules={[Scrollbar, Mousewheel]}
                         >
                          {
                           item.i.map(item => (

@@ -3,9 +3,13 @@
 .home-three {
     height: 100%;
     background-color: map-get($map: $color, $key: blue-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .home-three_container {
-        height: 100%;
-        margin: 0 10%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
         .home-three-main {
             height: 100%;
             width: 100%;
@@ -13,27 +17,38 @@
             justify-content: center;
             align-items: center;
             .home-three-items {
-                width: 100%;
                 display: flex;
                 flex-direction: row;
+                flex-wrap: nowrap;  
+                justify-content: center;
                 gap: 20px;
                 .home-three-item {
+                    .home-three-item-container {
                     display: flex;
                     flex-direction: column;
                     background: #19065f;
-                    padding-top: 60px;
-                    padding-bottom: 70px;
+                    padding-top:40px;
+                    padding-bottom: 30px;
                     transition: all 0.5s ease;
-                    width: 25%;
+                    width: 366px;
+                    overflow-y: hidden;
                     h3, .home-three-item-desc {
                         padding-left: 20px;
                     }
                     h3 {
-                        font-size: 40px;
-                        font-weight: 600;
-                        height: 78px;
-                        margin-bottom: 38px;
                         color: #604da6;
+                        font-size: 40.5px;
+                        font-stretch: normal;
+                        font-style: normal;
+                        font-weight: 600;
+                        letter-spacing: normal;
+                        line-height: 1;
+                        max-width: 150px;
+                        min-height: 91px;
+                        padding-bottom: 10px;
+                        padding-left: 20px;
+                        text-align: left;
+                        transition: all .5s;
                     }
                     .home-three-item-img {
                         height: 280px;
@@ -57,6 +72,7 @@
                         background: #673dc7;
                         transform: scale(1.1);
                         transition: all 0.5s ease;
+                        margin: 0 30px;
                         h3{
                             color: map-get($map: $color, $key: main);
                             transition: all 0.5s ease;
@@ -82,6 +98,7 @@
                         transform: translateX(20px);
                         transition: all 0.5s ease;
                     }
+                    }
                 }
             }
         }
@@ -96,32 +113,30 @@
                 .home-three-items {
                     flex-direction: column;
                     .home-three-item {
-                        height: 22vh;
-                        width: 100%;
-                        padding-top: unset;
-                        padding: 15px;
-                        h3, .home-three-item-desc {
-                            padding-left: unset;
-                        }
-                        .home-three-item-img {
-                            display: none;
-                        }
-                        .home-three-item-desc {
-                            width: 100%;
-                            h4 {
+                        .home-three-item-container {
+                            // height: 22vh;
+                            min-width: 600px;
+                            padding-top: unset;
+                            padding: 15px;
+                            h3, .home-three-item-desc {
+                                padding-left: unset;
+                            }
+                            .home-three-item-img {
                                 display: none;
                             }
-                            p {
-                                transform: unset;
+                            .home-three-item-desc {
+                                width: 100%;
+                                // h4 {
+                                //     display: none;
+                                // }
+                                p {
+                                    transform: unset;
+                                }
                             }
-                        }
-                        &.left {
-                            transform: translateY(-20px);
-                            transition: all 0.5s ease;
-                        }
-                        &.right {
-                            transform: translateY(20px);
-                            transition: all 0.5s ease;
+                            &:hover {
+                                margin: 10px 0;
+
+                            }
                         }
                     }
                 }
@@ -136,10 +151,13 @@
         .home-three_container {
             .home-three-main {
                 .home-three-items {
-                    gap: 5px;
+                    gap: 10px;
                     .home-three-item {
-                        padding:0 15px;
-                        height: 17vh;
+                        
+                        .home-three-item-container {
+                            padding-top: 10px;
+                            height: 100px;
+                            max-width: 320px;
                         h3 {
                             font-size: 30px;
                             margin-bottom: 15px;
@@ -166,10 +184,12 @@
                             transition: all 0.5s ease;
                         }
                         &:hover {
-                            height: max-content;
+                            height: 250px;
+                            transform: unset;
                             .home-three-item-desc {
                                 display: block;
                             }
+                        }
                         }
                     }
                 }
