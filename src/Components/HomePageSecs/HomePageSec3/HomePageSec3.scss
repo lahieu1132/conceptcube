@@ -176,14 +176,6 @@
                                 transform: unset;
                             }
                         }
-                        &.left {
-                            transform: translateY(-20px);
-                            transition: all 0.5s ease;
-                        }
-                        &.right {
-                            transform: translateY(20px);
-                            transition: all 0.5s ease;
-                        }
                         &:hover {
                             height: 250px;
                             transform: unset;
