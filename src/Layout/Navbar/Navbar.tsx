@@ -8,7 +8,7 @@ const language = ["KR", "EN"]
 function Navbar() {
 
     const [menuActive, setMenuActive] = useState(false)
-    const [languageAvtive, setLanguageAvtive] = useState(0)
+    const [languageAvtive, setLanguageAvtive] = useState(1)
 
   return (
     <div className='navbar'>

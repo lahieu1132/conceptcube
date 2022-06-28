@@ -6,8 +6,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./HomePageSec4.scss"
 import "swiper/css";
 import "swiper/css/scrollbar";
+import "swiper/css/navigation";
 
-import { Scrollbar, Mousewheel } from "swiper";
+import { Scrollbar, Mousewheel,Navigation } from "swiper";
+
+import {AiOutlineRight, AiOutlineLeft} from "react-icons/ai"
+
 
 const items = [
   {
@@ -134,7 +138,7 @@ function HomePageSec4() {
 
   return (
     <div className='section'>
-      <div className="home-four">
+      <div className="home-four select-none">
         <div className="home-four-container">
           <div className="home-four-main">
             <p className="home-four-main-title">
@@ -144,6 +148,10 @@ function HomePageSec4() {
               <Swiper
                 // slidesPerView={4}
                 spaceBetween={30}
+                navigation={{
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev"
+                }}
                 breakpoints={{
                   576: {
                     slidesPerView: 1,
@@ -158,6 +166,7 @@ function HomePageSec4() {
                     slidesPerView: 4,
                   },
                 }}
+                modules={[Navigation]}
                 className="mySwiper"
               >
                 {
@@ -173,9 +182,9 @@ function HomePageSec4() {
                           // spaceBetween={10}
                           className="mySwiper-vertical"
                           mousewheel={true}
-                          // scrollbar={{
-                          //   hide: true,
-                          // }}
+                          scrollbar={{
+                            hide: true,
+                          }}
                           modules={[Scrollbar, Mousewheel]}
                         >
                          {
@@ -197,6 +206,12 @@ function HomePageSec4() {
                     </SwiperSlide>
                   ))
                 }
+                <div className="swiper-button-next">
+                  <AiOutlineRight />
+                </div>
+                <div className="swiper-button-prev">
+                  <AiOutlineLeft />
+                </div>
               </Swiper>
             </div>
           </div>
