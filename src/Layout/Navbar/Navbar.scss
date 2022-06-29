@@ -38,6 +38,7 @@
             display: flex;
             flex-direction: row;
             gap: 10px;
+            z-index: 100;
             .navbar-language-item {
                 color: map-get($map: $color, $key: w);
                 cursor: pointer;
