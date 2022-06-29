@@ -1,4 +1,5 @@
 import React, {MouseEvent, useState} from 'react'
+import { useTranslation } from "react-i18next";
 
 import "./HomePageSec3.scss"
 
@@ -12,6 +13,7 @@ import img2a from "../../../Assets/Images/Page3/on-game-mar-img@2x.png"
 import img3a from "../../../Assets/Images/Page3/on-si-img@2x.png"
 import img4a from "../../../Assets/Images/Page3/on-ui-design-img@2x.png"
 
+import '../../../i18n'
 
 
 const items= [
@@ -19,25 +21,25 @@ const items= [
     title: 'Game Development',
     img: img1,
     imgActive: img1a,
-    desc: "VFX, 소셜광고 디자인, 아트웍, 게임 개발 등 이미지와 디자인 제작에 필요한 모든 것 그리고 고객이 필요로 하는 기술과 결과물을 제공합니다. 또한 모션그래픽 및 자막, 종적 타이포그래피, 애니메이션 등 촬영 이미지와 CG를 합성하여 완성도 있는 결과물을 도출합니다."
+    desc: "page 3 item"
   },
   {
     title: 'UI design',
     img: img2,
     imgActive: img2a,
-    desc: "VFX, 소셜광고 디자인, 아트웍, 게임 개발 등 이미지와 디자인 제작에 필요한 모든 것 그리고 고객이 필요로 하는 기술과 결과물을 제공합니다. 또한 모션그래픽 및 자막, 종적 타이포그래피, 애니메이션 등 촬영 이미지와 CG를 합성하여 완성도 있는 결과물을 도출합니다."
+    desc: "page 3 item"
   },
   {
     title: 'SI',
     img: img3,
     imgActive: img3a,
-    desc: "VFX, 소셜광고 디자인, 아트웍, 게임 개발 등 이미지와 디자인 제작에 필요한 모든 것 그리고 고객이 필요로 하는 기술과 결과물을 제공합니다. 또한 모션그래픽 및 자막, 종적 타이포그래피, 애니메이션 등 촬영 이미지와 CG를 합성하여 완성도 있는 결과물을 도출합니다."
+    desc: "page 3 item"
   },
   {
     title: 'Game Marketing',
     img: img4,
     imgActive: img4a,
-    desc: "VFX, 소셜광고 디자인, 아트웍, 게임 개발 등 이미지와 디자인 제작에 필요한 모든 것 그리고 고객이 필요로 하는 기술과 결과물을 제공합니다. 또한 모션그래픽 및 자막, 종적 타이포그래피, 애니메이션 등 촬영 이미지와 CG를 합성하여 완성도 있는 결과물을 도출합니다."
+    desc: "page 3 item"
   },
 ]
 
@@ -45,6 +47,8 @@ const items= [
 function HomePageSec3() {
 
   const [itemOver, setItemOver] = useState<number|null>(null)
+  const { t } = useTranslation();
+
 
   function onMouseOver(event: MouseEvent, index: number){
     setItemOver(index)
@@ -83,7 +87,7 @@ function HomePageSec3() {
                         </div>
                         <div className="home-three-item-desc ">
                           <h4>{title}</h4>
-                          <p>{desc}</p>
+                          <p>{t(desc)}</p>
                         </div>
                       </div>
                     </div>

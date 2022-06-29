@@ -1,6 +1,7 @@
 import React, { useEffect, MouseEvent } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { useTranslation } from "react-i18next";
+import '../../../i18n'
 
 
 import "./HomePageSec4.scss"
@@ -18,23 +19,23 @@ const items = [
     year: 2022,
     i: [
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       }
     ]
@@ -43,23 +44,23 @@ const items = [
     year: 2021,
     i: [
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       }
     ]
@@ -68,22 +69,22 @@ const items = [
     year: 2020,
     i: [
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },{
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       }
     ]
@@ -92,19 +93,19 @@ const items = [
     year: 2019,
     i: [
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       }
     ]
@@ -113,19 +114,19 @@ const items = [
     year: 2018,
     i: [
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       },
       {
-        desc: "LG Display Shocase 영상 제작",
+        desc: "page 4 item",
         author: "MOTION"
       }
     ]
@@ -134,6 +135,7 @@ const items = [
 
 function HomePageSec4() {
 
+  const { t } = useTranslation();
   
 
   return (
@@ -192,7 +194,7 @@ function HomePageSec4() {
                             <SwiperSlide>
                               <div className="mySwiper-vertical-item">
                                 <h3>
-                                  {item.desc}
+                                  {t(item.desc)}
                                 </h3>
                                 <p>
                                   {item.author}
