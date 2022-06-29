@@ -90,20 +90,37 @@
                             }
                         }
                     }
-                    &.left {
-                        transform: translateX(-20px);
-                        transition: all 0.5s ease;
-                    }
-                    &.right {
-                        transform: translateX(20px);
-                        transition: all 0.5s ease;
-                    }
                     }
                 }
             }
         }
     }
 
+}
+
+@media screen and (max-width: 1576px) {
+    .home-three {
+        .home-three_container {
+            .home-three-main {
+                .home-three-items {
+                    flex-wrap: wrap;
+                    .home-three-item {
+                        .home-three-item-container {
+                            width: 600px !important;
+                            .home-three-item-img {
+                                display: none;
+                            }
+                            &:hover {
+                                transform: unset;
+                                margin: unset;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1024px) {
