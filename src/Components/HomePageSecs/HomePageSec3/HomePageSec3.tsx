@@ -47,7 +47,7 @@ const items= [
 function HomePageSec3() {
 
   const [itemOver, setItemOver] = useState<number|null>(null)
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
 
   function onMouseOver(event: MouseEvent, index: number){

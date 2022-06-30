@@ -11,10 +11,8 @@
         width: 100%;
         max-width: 80%;
         .home-four-main {
-
             display: flex;
             flex-direction: column;
-            
             .home-four-main-title {
                 text-align: center;
                 font-size: 65px;
@@ -43,6 +41,7 @@
                     height: 250px;
                     overflow: hidden;
                     .mySwiper-vertical-item {
+                        cursor: pointer;
                         h3 {
                             font-size: 14px;
                             font-weight: 600;
@@ -51,6 +50,9 @@
                             font-size: 14px;
                             font-weight: 300;
                         }
+                    }
+                    &:hover .swiper-scrollbar.swiper-scrollbar-vertical, .swiper-vertical>.swiper-scrollbar {
+                        opacity: 1 !important;
                     }
                 }
             }
@@ -61,6 +63,7 @@
     // opacity: 1 !important;
     width: 2px !important;
 }
+
 .section.active {
     .home-four {
         .home-four-container {

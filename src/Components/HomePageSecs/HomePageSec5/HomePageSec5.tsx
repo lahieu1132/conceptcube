@@ -3,6 +3,7 @@ import React from 'react'
 import "./HomePageSec5.scss"
 
 import {AiOutlineMail} from "react-icons/ai"
+import { Link } from 'react-router-dom'
 
 function HomePageSec5() {
   return (
@@ -41,9 +42,9 @@ function HomePageSec5() {
                 <h3>
                   Learn more
                 </h3>
-                <p>
+                <Link to="/" className='link'>
                   Learn more about us &gt;
-                </p>
+                </Link>
               </div>
             </div>
             <h2 className="home-five-title select-none">

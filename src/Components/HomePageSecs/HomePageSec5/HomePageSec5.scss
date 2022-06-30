@@ -28,7 +28,11 @@
                 flex-direction: column;
                 gap: 50px;
                 color: map-get($map: $color, $key: w);
+
                 .home-five-contact-item {
+                    .link {
+                        color: map-get($map: $color, $key: w);
+                    }
                     h3 {
                         font-size: 2em;
                         margin-bottom: 20px;
@@ -42,6 +46,7 @@
                         transition: all 0.5s ease;
                         transition-delay: 1s;
                         height: 35px;
+                        cursor: pointer;
                         p {
                             font-size: .8em;
                             font-weight: 300;
@@ -139,13 +144,15 @@
                     gap: 20px;
                     width: 100%;
                     text-align: center;
+                    
                     .home-five-contact-item {
                         h3 {
                             font-size: 2.5em;
                             margin-bottom: 10px;
                         }
+                        
                         .home-five-contact-item-mail{
-                            p {
+                            p{
                                 font-size: 1.8em;
                                 margin-left: unset;
                             }
