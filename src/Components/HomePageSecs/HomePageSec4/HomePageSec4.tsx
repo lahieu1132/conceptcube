@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 
-import { Scrollbar, Mousewheel,Navigation } from "swiper";
+import { Scrollbar, Mousewheel,Navigation, Autoplay } from "swiper";
 
 import {AiOutlineRight, AiOutlineLeft} from "react-icons/ai"
 
@@ -168,7 +168,13 @@ function HomePageSec4() {
                     slidesPerView: 4,
                   },
                 }}
-                modules={[Navigation]}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true,
+                  stopOnLastSlide: true
+                }}
+                modules={[Navigation, Autoplay]}
                 className="mySwiper"
               >
                 {
