@@ -1,0 +1,69 @@
+@import "../../../../Assets/style/variables";
+
+.works {
+    .works-container {
+        .scroll {
+            height: calc(100% - 100px);
+            overflow-y: scroll;
+            .works-list {
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: 20px;
+                height: auto;
+                padding-right: 60px;
+                padding-left: 10px;
+                padding-top: 15px;
+                
+            }
+            
+        }
+        scrollbar-width: 1px;
+        ::-webkit-scrollbar {
+            width: 1px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: black;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ccc; 
+        }
+    }
+}
+
+@media screen and (max-width: 1724px) {
+    .works {
+        .works-container {
+            .works-list {
+                grid-template-columns: repeat(3,1fr) !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .works {
+        .works-container {
+            .works-list {
+                grid-template-columns: repeat(2,1fr) !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .works {
+        .works-container {
+            .works-list {
+                grid-template-columns: repeat(1,1fr) !important;
+                padding-right: unset !important;
+                padding-left: unset !important;
+            }
+            ::-webkit-scrollbar-thumb{
+                background-color: transparent !important;
+            }
+            ::-webkit-scrollbar-track {
+                background: transparent !important; 
+            }
+        }
+    }
+}

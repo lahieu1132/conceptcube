@@ -15,7 +15,7 @@ function HomePage() {
   return (
     <ReactFullpage
     //fullpage options
-    licenseKey = {'YOUR_KEY_HERE'}
+    // licenseKey = {''}
     scrollingSpeed = {1000} /* Options here */
     navigation={true}
     normalScrollElements={".home-four-content"}

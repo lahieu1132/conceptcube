@@ -1,0 +1,21 @@
+@import "../../../../Assets//style/variables" ;
+
+.works-navbar {
+    display: flex;
+    flex-direction: row;
+    z-index: 10;
+    .works-navbar-item {
+        padding: 2px 5px;
+        font-size: 12px;
+        font-family: Montserrat-Medium;
+    }
+    .works-navbar-mobile {
+        width: 1000px !important;
+    }
+}
+
+// @media screen and (max-width: 1024px) {
+//     .works-navbar {
+        
+//     }
+//  }

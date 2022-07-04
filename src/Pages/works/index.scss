@@ -1,0 +1,47 @@
+@import "../../Assets/style/variables";
+
+.works {
+    overflow: hidden;
+    height: 100vh;
+    .works-container {
+        width: 70%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 43px 20px;
+    }
+    ~ .navbar {
+        .navbar-menu-btn {
+            span {
+                background-color: black !important;
+            }
+            &.active {
+                span {
+                    background-color: white !important;
+                }
+            }
+        }
+        .navbar-language-item {
+            color: #cdcdcd !important;
+            &.active {
+                color: #199dfb !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .works {
+        .works-container {
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .works {
+        .works-container {
+            width: 100%;
+            // padding: 0 15px !important;
+        }
+    }
+}

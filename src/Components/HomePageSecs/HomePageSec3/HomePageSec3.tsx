@@ -76,10 +76,10 @@ function HomePageSec3() {
                     >
                       <div className="home-three-item-container">
                         <h3 >
-                          {title.split(' ').map(item => (
-                            <>
+                          {title.split(' ').map((item, index) => (
+                            <span key={index}>
                               {item}<br />
-                            </>
+                            </span>
                           ))}
                         </h3>
                         <div className="home-three-item-img">

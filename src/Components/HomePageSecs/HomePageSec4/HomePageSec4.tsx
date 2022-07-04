@@ -178,8 +178,8 @@ function HomePageSec4() {
                 className="mySwiper"
               >
                 {
-                  items.map(item => (
-                    <SwiperSlide>
+                  items.map((item, index) => (
+                    <SwiperSlide key={index}>
                       <div className='home-four-item'>
                         <h2>
                           {item.year}
@@ -196,8 +196,8 @@ function HomePageSec4() {
                           modules={[Scrollbar, Mousewheel]}
                         >
                          {
-                          item.i.map(item => (
-                            <SwiperSlide>
+                          item.i.map((item, index) => (
+                            <SwiperSlide key={index}>
                               <div className="mySwiper-vertical-item">
                                 <h3>
                                   {t(item.desc)}
