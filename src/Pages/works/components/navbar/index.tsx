@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import useWindowSize from '../../../../hooks/useWindowSize'
 
@@ -13,18 +13,36 @@ interface navbarItems {
 
 
 const Navbar:React.FC<any> = ({navbar}) => {
+  const [selecteditem, setSelectedItem] = useState<string>("ALL")
+  const [isOpenSelect, setIsOpenSelect] = useState<boolean>(false)
   let [searchParams] = useSearchParams();
   let isActive = searchParams.get("tab");
   let navigate = useNavigate();
   const windowSize = useWindowSize()
   
-  const onChange = (obj:any) => {
-    obj.preventDefault();
-    console.log(obj.target.value)
-    if(obj.target.value == "ALL") {
+  const contentRef = useRef<HTMLDivElement>(null)
+    useEffect(() => {
+        if (!isOpenSelect) return;
+    
+        function listener(evt:any) {
+          if (contentRef.current?.contains(evt.target)) return;
+          setIsOpenSelect(false);
+        }
+    
+        window.addEventListener("click", listener);
+    
+        return () => {
+          window.removeEventListener("click", listener);
+        };
+      }, [isOpenSelect]);
+
+  const onClickSelect = (item:string) => {
+    setSelectedItem(item)
+    setIsOpenSelect(false)
+    if(item == "ALL") {
       navigate(`/works`)
     } 
-    else navigate(`/works?tab=${obj.target.value}`)
+    else navigate(`/works?tab=${item}`)
   }
 
   return (
@@ -57,34 +75,36 @@ const Navbar:React.FC<any> = ({navbar}) => {
         }
       </div>
       :
-        <select onChange={onChange} className="works-navbar-mobile" >
-          <option value="ALL">
-            <Link to={`/works`}
-              className="works-navbar-item"
-              style={{
-                color: isActive === "ALL" || isActive == null  ? "black" : "#b4b4b4",
-                }}
+        <div className="works-navbar-mobile" ref={contentRef}>
+          <div className="navbar-selected"
+            onClick={() => setIsOpenSelect(!isOpenSelect)}
+          >
+            <p>{selecteditem}</p>
+            {isOpenSelect ? <div className="arrow-up"></div> :
+            <div className="arrow-down"></div>}
+          </div>
+          {isOpenSelect &&
+            <div className="navbar-select-list "
+              onClick={(e)=> e.stopPropagation()}
             >
-              All
-            </Link>
-          </option>
-          {
-          navbar.map((item:any,index:number)=> {
-            return (
-              <option value={item.path}>
-                <Link to={`/works?tab=${item.path}`} key={index} 
-                className={item.className}
-                style={{
-                  color: isActive === item.path  ? "black" : "#b4b4b4",
-                }}
+            <div className={`navbar-select-item ${selecteditem === "ALL" && "active"}`}
+                  onClick={()=>onClickSelect("ALL")}
+            >
+                ALL
+            </div>
+            {
+              navbar.map((item:any, index:number)=> (
+                <div className={`navbar-select-item ${selecteditem === item.path && "active"}`}
+                  onClick={()=>onClickSelect(item.path)}
                 >
-                {item.path}
-                </Link>
-              </option>
-            )
-          })
-        }
-        </select>
+                  {
+                    item.path
+                  }
+                </div>
+              ))
+            }
+          </div>}
+        </div>
       }
       
     </>

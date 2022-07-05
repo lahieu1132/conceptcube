@@ -9,6 +9,7 @@
         flex-direction: row;
         align-items: center;
         background: #fff;
+        z-index: 12;
         .works-footer-logo {
             height: 16px;
             width: 42px;
@@ -41,5 +42,11 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .works-footer-logo {
+        display: none !important;
     }
 }
