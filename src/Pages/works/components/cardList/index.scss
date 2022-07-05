@@ -44,7 +44,16 @@
     .works {
         .works-container {
             .works-list {
+                padding-right: unset !important;
+                padding-left: unset !important;
+
                 grid-template-columns: repeat(2,1fr) !important;
+            }
+            ::-webkit-scrollbar-thumb{
+                background-color: transparent !important;
+            }
+            ::-webkit-scrollbar-track {
+                background: transparent !important; 
             }
         }
     }
