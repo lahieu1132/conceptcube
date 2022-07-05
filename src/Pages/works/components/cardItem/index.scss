@@ -71,3 +71,14 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .works-item-desc  {
+        opacity: 1 !important;
+        transform: unset !important;
+        top: unset !important;
+        bottom: 15px;
+        height: 80px !important;
+
+    }
+}
