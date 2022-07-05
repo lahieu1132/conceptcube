@@ -15,6 +15,7 @@
         margin: 0 auto;
         background: #fff;
         padding-right: 20px;
+        position: relative;
         .modal-scroll {
             overflow-y: scroll;
             padding: 30px 30px 0;
@@ -58,6 +59,72 @@
                     font-family: Montserrat-ExtraLight,Noto Sans KR;
                     font-weight: 100;
                     color: map-get($map: $color, $key: w);
+                }
+            }
+        }
+        .modal-btn-close {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 50px;
+            height: 50px;
+            background: #000;
+            cursor: pointer;
+
+            &:hover {
+                .modal-btn-icon {
+                    transform: rotate(360deg);
+                    transition: all .3s ease;
+                }
+            }
+            .modal-btn-icon {
+                height: 100%;
+                position: relative;
+                transform: rotate(0);
+                transition: all .3s ease;
+                span {
+                    width: 30px;
+                    height: 2px;
+                    background: #fff;
+                    position: absolute;
+                    &:first-child {
+                        left: 10px;
+                        top: 50%;
+                        transform: translate(0%, -50%) rotate(45deg);
+                    }
+                    &:last-child {
+                        left: 50%;
+                        top: 24px;
+                        transform: translate(-50%, 0%) rotate(132deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+@media screen and (max-width: 576px) {
+    .modal {
+        .modal-container {
+            width: 100%;
+            padding-right: unset;
+            .modal-btn-close {
+                left: unset;
+                right: 20px;
+                transform: scale(0.8);
+                border-radius: 5px;
+            }
+            .modal-scroll {
+                padding: 50px 0 0;
+                .modal-item-video {
+                    height: 50vw;
+                }
+                .works-item-desc {
+                    padding: 0 20px;
                 }
             }
         }

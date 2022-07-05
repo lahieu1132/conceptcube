@@ -32,6 +32,12 @@ const ModalItem:FC<any> = ({children,...props}) => {
                     <div className="modal-scroll">
                     {children}
                     </div>
+                    <div className='modal-btn-close' onClick={close}>
+                        <div className='modal-btn-icon'>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
                 </div>
             </div>      
         }

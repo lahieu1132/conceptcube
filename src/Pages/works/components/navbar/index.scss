@@ -1,5 +1,10 @@
 @import "../../../../Assets//style/variables" ;
 
+.works-navbar-mobile {
+    margin-left: 5px;
+    width: 97% ;
+    padding-right: 10px;
+}
 .works-navbar {
     display: flex;
     flex-direction: row;
@@ -9,13 +14,12 @@
         font-size: 12px;
         font-family: Montserrat-Medium;
     }
-    .works-navbar-mobile {
-        width: 1000px !important;
-    }
+    
 }
 
-// @media screen and (max-width: 1024px) {
-//     .works-navbar {
-        
-//     }
-//  }
+@media screen and (max-width: 1024px) {
+    .works-navbar {
+        .works-navbar-mobile {
+            margin-left: 5px;
+    }
+    }}

@@ -16,7 +16,10 @@ function Navbar() {
     const changeLanguage = (lng:any) => {
         i18n.changeLanguage(lng);
       };
-
+    
+    const onClickLink = () => {
+        setMenuActive(false)
+    }
 
 
   return (
@@ -45,9 +48,9 @@ function Navbar() {
             <div className={`navbar-menu ${menuActive && "active"}`}>
                 <div className="navbar-menu-main">
                     <ul className="navbar-list">
-                        <NavLink to="/" className="navbar-link">Home</NavLink>
-                        <NavLink to="/works" className="navbar-link">Works</NavLink>
-                        <NavLink to="/conact" className="navbar-link">Contact</NavLink>
+                        <NavLink to="/" onClick={onClickLink} className="navbar-link">Home</NavLink>
+                        <NavLink to="/works" onClick={onClickLink} className="navbar-link">Works</NavLink>
+                        <NavLink to="/conact" onClick={onClickLink} className="navbar-link">Contact</NavLink>
                     </ul>
                     <div className='navbar-menu-info'>
                         <p className='address'>
