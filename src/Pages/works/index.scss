@@ -19,13 +19,7 @@
                     background-color: white !important;
                 }
             }
-            & ~.navbar-language {
-                opacity: 0;
-            }
-            &.active ~.navbar-language {
-                opacity: 1;
-                transition: all 0.5s ease;
-            }
+            
         }
         
         .navbar-language-item {
@@ -42,6 +36,17 @@
         .works-container {
             width: 80%;
         }
+        ~ .navbar {
+            .navbar-menu-btn {
+                & ~.navbar-language {
+                    opacity: 0;
+                }
+                &.active ~.navbar-language {
+                    opacity: 1;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
     }
 }
 
@@ -50,6 +55,9 @@
         .works-container {
             width: 100%;
             // padding: 0 15px !important;
+            
         }
+        
     }
+
 }

@@ -1,10 +1,11 @@
 @import "../../../../Assets//style/variables" ;
 
 .works-navbar-mobile {
-    margin-left: 5px;
-    width: 97% ;
+    // margin-left: 5px;
+    width: 100% ;
     border: 1px solid #ccc;
-    padding-right: 10px;
+    // padding-right: 10px;
+    margin-bottom: 10px;
     position: relative;
     .navbar-selected {
         height: 100%;
